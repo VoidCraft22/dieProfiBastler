@@ -39,6 +39,7 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
+    align-items: center;
 }
 
 h1:hover, h2:hover {
@@ -185,10 +186,18 @@ footer {
     margin: 2rem 0;
 }
 
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
 .section-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .video-container {
@@ -254,6 +263,95 @@ footer {
     transform: scale(1.1);
 }
 
+/* Admin Styles */
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.login-form {
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+}
+
+.login-button,
+.admin-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.admin-button:hover {
+    background-color: var(--hover-color);
+}
+
+.error-message {
+    color: #ff4444;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-header .section-title {
+    text-align: center;
+    margin: 0;
+}
+
+.admin-main {
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.admin-section {
+    margin-bottom: 2rem;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -281,8 +379,13 @@ footer {
 
 .modal img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 95vh;
     object-fit: contain;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 
