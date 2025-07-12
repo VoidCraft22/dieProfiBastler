@@ -12,25 +12,21 @@ closeButton.className = 'close-modal';
 closeButton.textContent = '×';
 modalContent.appendChild(closeButton);
 
-// Function to close the modal
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-// Event listener for close button
-closeButton.addEventListener('click', closeModal);
-
-// Event listener for clicking outside the modal
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
 // Add ESC key support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.style.display === 'block') {
-        closeModal();
+        modal.style.display = 'none';
+    }
+});
+
+// Füge hier den YouTube Video ID ein
+const YOUTUBE_VIDEO_ID = 'VIDEO_ID';
+
+// Aktualisiere den Video-Link, wenn die Seite geladen wird
+document.addEventListener('DOMContentLoaded', () => {
+    const iframe = document.querySelector('.video-iframe');
+    if (iframe) {
+        iframe.src = `https://www.youtube.com/embed/XLvZhABAaG4?si=Iz23e5nUCmzKUNgH`;
     }
 });
 
